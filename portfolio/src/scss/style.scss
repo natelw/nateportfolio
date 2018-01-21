@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: #262626;
+}
+
+* {
+  font-family: inherit;
+}
+
+// Typography
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none!important;
+}
+
+// Header
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 40px;
+  background-color: #141414;
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        float: right;
+        margin-left: 20px;
+        line-height: 40px;
+        &:last-of-type {
+          margin-left: 0;
+        }
+        a {
+          color: white;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+          }
+          &:hover {
+            color: white;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sections
+
+section {
+  text-align: center;
+  h2 {
+    font-size: 28px;
+  }
+  .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    margin-top: 10px;
+
+  }
+  &:last-of-type {
+    .container {
+      border-bottom: 0;
+    }
+  }
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  background-image:  url('/assets/images/skyliner.jpg');
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+}
+#hero {
+  height: 100vh;
+  .infobox {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    a {
+      color: white;
+    }
+    a :hover {
+      color: #141414;
+      opacity: 0.5;
+    }
+    h1 {
+    font-size: 36px;
+    color: white;
+    margin: 10px;
+    }
+    h2 {
+      color: white;
+    }
+    #mainlogo {
+    height: 14em;
+    margin: 100px 30px 30px 30px;
+
+    }
+    .contact {
+      color: white;
+      font-size: 64px;
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+
+
+.introbox {
+}
+
+#portfolio {
+  color: white;
+  .image {
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+    &.image-one {
+      background-image: url('/assets/images/whitebuggedout.png');
+    }
+    &.image-two {
+      background-image: url('/assets/images/whitelairlogo.png');
+    }
+    &.image-three {
+      background-image: url('/assets/images/whiteoutlogo.png');
+    }
+    &.image-four {
+      background-image: url('/assets/images/whitedelverlogo.png');
+    }
+  }
+}
+#about {
+  color: white;
+  position: relative;
+  background-color: #141414;
+}
+
+#viewer{
+  height: 30vh;
+}
+
+
+footer {
+  background-color: #141414;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: white;
+  p {
+    margin: 0;
+  }
+}
